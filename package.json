@@ -1,7 +1,7 @@
 {
-  "name": "login-ui",
+  "name": "Invitation UI",
   "version": "1.0.0",
-  "description": "Login Flow",
+  "description": "Invitation management UI",
   "author": "Jake Flynn",
   "license": "MIT",
   "private": true,
@@ -31,7 +31,6 @@
     "query-string": "^5.1.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-facebook-login": "^4.0.1",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-router": "^4.1.2",
     "react-router-dom": "^4.1.2",
