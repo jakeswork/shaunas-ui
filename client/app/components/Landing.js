@@ -46,36 +46,38 @@ class Landing extends Component {
 		return (
 			<div className="full-page">
 				{ this.state.loading && <Loading /> }
-				<div className="total">
+				<div className="row">
 					<h1>Total responses: {this.state.data.length}</h1>
 				</div>
-				<div className="col">
-					<h1>Coming ({this.state.coming})</h1>
-					{
-						this.state.data.map(function(doc, i) {
-							if(doc.answer === 'coming') {
-								return (
-									<div className={doc.answer + ' tile'} key={i}>
-										<p>{doc.name}</p>
-									</div>
-								)
-							}
-						})
-					}
-				</div>
-				<div className="col">
-					<h1>Not Coming ({this.state.notComing})</h1>
-					{
-						this.state.data.map(function(doc, i) {
-							if(doc.answer === 'not-coming') {
-								return (
-									<div className={doc.answer + ' tile'} key={i}>
-										<p>{doc.name}</p>
-									</div>
-								)
-							}
-						})
-					}
+				<div className="row">
+					<div className="col">
+						<h1>Coming ({this.state.coming})</h1>
+						{
+							this.state.data.map(function(doc, i) {
+								if(doc.answer === 'coming') {
+									return (
+										<div className={doc.answer + ' tile'} key={i}>
+											<p>{doc.name}</p>
+										</div>
+									)
+								}
+							})
+						}
+					</div>
+					<div className="col">
+						<h1>Not Coming ({this.state.notComing})</h1>
+						{
+							this.state.data.map(function(doc, i) {
+								if(doc.answer === 'not-coming') {
+									return (
+										<div className={doc.answer + ' tile'} key={i}>
+											<p>{doc.name}</p>
+										</div>
+									)
+								}
+							})
+						}
+					</div>
 				</div>
 			</div>
 		)
