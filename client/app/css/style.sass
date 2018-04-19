@@ -1,0 +1,70 @@
+@import 'colourPalette.sass'
+
+body
+	font-family: 'Karla', sans-serif
+
+#app
+	background: $white
+	color: $dark
+	text-align: center
+	h1
+		font-size: 20px
+
+.full-page
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	min-height: 100vh
+	vertical-align: center
+
+.total
+	position: fixed
+	left: 20px
+
+.col
+	margin: 0 10px
+
+.tile
+	padding: 5px 10px
+	border: 1px solid $dark
+	border-radius: 5px
+	margin: 10px
+
+.coming
+	border: 1px solid $emerald
+
+.not-coming
+	border: 1px solid $orange
+
+@keyframes spin
+	100%
+		transform: rotate(360deg)
+
+.overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	background: transparentize($white, 0.2)
+
+.spinner
+	width: 100px
+	height: 100px
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 10px 20px
+	&:before
+		content: ""
+		color: white
+		height: 50px
+		width: 50px
+		background: transparent
+		border-radius: 50%
+		border: 5px solid transparent
+		border-color: $blue $blue transparent transparent
+		animation: spin .8s infinite
